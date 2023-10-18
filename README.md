@@ -1,2 +1,2 @@
 # CodingPractice
-It's a great motivation to code if I upload it here :)
+It's great for motivation to code everyday. if I upload it here :)
