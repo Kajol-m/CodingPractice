@@ -19,7 +19,7 @@ class Result {
      */
 
     public static void miniMaxSum(List<Integer> arr) {
-    int max = Integer.MIN_VALUE;
+    int max = Integer.MIN_VALUE;  //replace int ->long and Integer->Long for Big Integer
     int min = Integer.MAX_VALUE;
     
     for (int i = 0; i < arr.size(); i++) {
