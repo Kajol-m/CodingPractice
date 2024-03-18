@@ -21,15 +21,21 @@ class Result {
      *  2. INTEGER_ARRAY ar
      */
 
-    public static int sockMerchant(int n, List<Integer> ar) {
+   public static int sockMerchant(int n, List<Integer> ar) {
     // Write your code here
+    Map<Integer,Integer> socksCount=new HashMap<>();
     int pairs=0;
-    int count=0;
-    for(int i=0;i<a.size();i++){
-        if(a.get(i)==a.get(i+1)){
-            count++;
-        }
+    
+    for(int i=0;i<ar.size();i++){
+        int socks=ar.get(i);
+        socksCount.put(socks,socksCount.getOrDefault(socks,0)+1);//add elements in Hashmap 
     }
+    
+    for(int count:socksCount.values()){
+        pairs+=count/2;
+    }
+    
+    return pairs;
 
     }
 
