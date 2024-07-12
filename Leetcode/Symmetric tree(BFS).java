@@ -38,12 +38,18 @@ class Solution {
             if (node1.val!= node2.val) {
                 return false;
             }
+            if(node1==root && node2==root){
+                queue.add(node1.left);
+                queue.add(node2.right);//add the left-right of any one node.since they are both same
+            }
+            else{
+                queue.add(node1.left);
+                queue.add(node2.right);
 
-            queue.add(node1.left);
-            queue.add(node2.right);
-
-            queue.add(node1.right);
-            queue.add(node2.left);
+                queue.add(node1.right);
+                queue.add(node2.left);
+            }
+            
         }
 
         return true;
