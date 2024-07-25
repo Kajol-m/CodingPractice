@@ -14,14 +14,14 @@ class MyStack {
     }
     
     public int pop() {
-        for (int i = 0; i < q.size() - 1; i++) {
+        for (int i = 0; i < q.size() - 1; i++) {//REVERSING THE EDITOR SUCH THAT THE LAST ELEMENT IS IN INDEX 0
             q.add(q.poll());
         }
         return q.poll();
     }
     
     public int top() {
-        for (int i = 0; i < q.size() - 1; i++) {
+        for (int i = 0; i < q.size() - 1; i++) {//REVERSING THE EDITOR SUCH THAT THE LAST ELEMENT IS IN INDEX 0
             q.add(q.poll());
         }
         int top = q.poll();
@@ -46,7 +46,7 @@ class MyStack {
     
     public void push(int x) {
         q.add(x);
-        for (int i = 1; i < q.size(); i++) q.add(q.poll());
+        for (int i = 1; i < q.size(); i++) q.add(q.poll());--->REVERSING THE EDITOR
     }
     
     public int pop() {
