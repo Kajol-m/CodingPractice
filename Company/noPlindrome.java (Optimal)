@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class HelloWorld {
+    public static boolean isPalindrome(char[] s) {
+        int n = s.length;
+        for (int i = 0; i < n / 2; i++) {
+            if (s[i] != s[n - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int noPalindrome(String name) {
+        char[] chars = name.toCharArray();
+        int count = 0;
+        ArrayList<Integer> index = new ArrayList<>();
+
+        // Replace '?' with '0' and store indices
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '?') {
+                chars[i] = '0';
+                index.add(i);
+            }
+        }
+
+        int j = 0;
+        while (isPalindrome(chars) && j < index.size()) {
+            int in = index.get(j);
+            chars[in] = '1'; // No need to use replace() here
+            count++;
+            j++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        String name = "1001??1";
+        int res = noPalindrome(name);
+        System.out.println(res);
+    }
+}
